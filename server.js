@@ -10,8 +10,8 @@ const app = express();
 app.use(express.json());
 
 // routes
-app.use("/auth", authRouter);
-app.use("", authentication, todoRouter);
+app.use("/api", authRouter);
+app.use("/api/todos", authentication, todoRouter);
 
 app.listen(port, () => {
   console.log(port);

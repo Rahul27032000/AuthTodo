@@ -1,4 +1,4 @@
-GET  http://localhost:3000/auth
+POST http://localhost:3000/api/register
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-GET  http://localhost:3000/auth/login
+POST   http://localhost:3000/api/login
 Content-Type: application/json
 
 {
@@ -19,30 +19,38 @@ Content-Type: application/json
 
 
 ###
-GET  http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3M2FjZjU0YTQ3MjgyMGVkMzM2NjciLCJ1c2VybmFtZSI6Im5ld25hbWUxIiwiZW1haWwiOiJuZXduYW1lQG5hbWUxLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDV0eEhjVTVDWUdkdUdubDlNVFlLUnVvLldGRjViTGtGR2tpeU5qUWdISVp1OHRVcmFwNHZhIiwidG9kb3MiOltdLCJfX3YiOjAsImlhdCI6MTY4MDQzMDQxOCwiZXhwIjoxNjgwNDM3NjE4fQ.bl8WuZ4a1_ZDQkQ5vvDBwajK2Yr1He_HSqRmPJxFPp8
-
-###
-PATCH http://localhost:3000/
+GET  http://localhost:3000/api/todos
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3M2FjZjU0YTQ3MjgyMGVkMzM2NjciLCJ1c2VybmFtZSI6Im5ld25hbWUxIiwiZW1haWwiOiJuZXduYW1lQG5hbWUxLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDV0eEhjVTVDWUdkdUdubDlNVFlLUnVvLldGRjViTGtGR2tpeU5qUWdISVp1OHRVcmFwNHZhIiwidG9kb3MiOltdLCJfX3YiOjAsImlhdCI6MTY4MDQzMDQxOCwiZXhwIjoxNjgwNDM3NjE4fQ.bl8WuZ4a1_ZDQkQ5vvDBwajK2Yr1He_HSqRmPJxFPp8
 
 
 
 ###
-GET  http://localhost:3000/
+POST  http://localhost:3000/api/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3M2FjZjU0YTQ3MjgyMGVkMzM2NjciLCJ1c2VybmFtZSI6Im5ld25hbWUxIiwiZW1haWwiOiJuZXduYW1lQG5hbWUxLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDV0eEhjVTVDWUdkdUdubDlNVFlLUnVvLldGRjViTGtGR2tpeU5qUWdISVp1OHRVcmFwNHZhIiwidG9kb3MiOltdLCJfX3YiOjAsImlhdCI6MTY4MDQzMDQxOCwiZXhwIjoxNjgwNDM3NjE4fQ.bl8WuZ4a1_ZDQkQ5vvDBwajK2Yr1He_HSqRmPJxFPp8
+Content-Type: application/json
+
+{
+    "title":"my forth todo",
+    "description":"this is description for my forth todo"
+}
+
+###
+GET  http://localhost:3000/api/todos/6428a37de0d7b9150a6e28e2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
 
 
 
-###
-GET  http://localhost:3000/6428a37de0d7b9150a6e28e2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
-
-
 
 
 ###
-PATCH  http://localhost:3000/6428a37de0d7b9150a6e28e2
+PATCH http://localhost:3000/api/todos/6428a37de0d7b9150a6e28e2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3M2FjZjU0YTQ3MjgyMGVkMzM2NjciLCJ1c2VybmFtZSI6Im5ld25hbWUxIiwiZW1haWwiOiJuZXduYW1lQG5hbWUxLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDV0eEhjVTVDWUdkdUdubDlNVFlLUnVvLldGRjViTGtGR2tpeU5qUWdISVp1OHRVcmFwNHZhIiwidG9kb3MiOltdLCJfX3YiOjAsImlhdCI6MTY4MDQzMDQxOCwiZXhwIjoxNjgwNDM3NjE4fQ.bl8WuZ4a1_ZDQkQ5vvDBwajK2Yr1He_HSqRmPJxFPp8
+
+
+
+
+###
+PATCH  http://localhost:3000/api/todos/6428a37de0d7b9150a6e28e2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3M2FjZjU0YTQ3MjgyMGVkMzM2NjciLCJ1c2VybmFtZSI6Im5ld25hbWUxIiwiZW1haWwiOiJuZXduYW1lQG5hbWUxLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDV0eEhjVTVDWUdkdUdubDlNVFlLUnVvLldGRjViTGtGR2tpeU5qUWdISVp1OHRVcmFwNHZhIiwidG9kb3MiOltdLCJfX3YiOjAsImlhdCI6MTY4MDQzMDQxOCwiZXhwIjoxNjgwNDM3NjE4fQ.bl8WuZ4a1_ZDQkQ5vvDBwajK2Yr1He_HSqRmPJxFPp8
 Content-Type: application/json
 
@@ -56,21 +64,20 @@ Content-Type: application/json
 
 
 
-###
-POST  http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3M2FjZjU0YTQ3MjgyMGVkMzM2NjciLCJ1c2VybmFtZSI6Im5ld25hbWUxIiwiZW1haWwiOiJuZXduYW1lQG5hbWUxLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJDV0eEhjVTVDWUdkdUdubDlNVFlLUnVvLldGRjViTGtGR2tpeU5qUWdISVp1OHRVcmFwNHZhIiwidG9kb3MiOltdLCJfX3YiOjAsImlhdCI6MTY4MDQzMDQxOCwiZXhwIjoxNjgwNDM3NjE4fQ.bl8WuZ4a1_ZDQkQ5vvDBwajK2Yr1He_HSqRmPJxFPp8
-Content-Type: application/json
 
-{
-    "title":"my forth todo",
-    "description":"this is description for my forth todo"
-}
 
 
 
 
 ###
-POST  http://localhost:3000/
+GET  http://localhost:3000/api/todos/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
+
+
+
+
+###
+POST  http://localhost:3000/api/todos/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
 Content-Type: application/json
 
@@ -79,3 +86,29 @@ Content-Type: application/json
     "title":"this is my first todo",
     "description":"this is description for my first todo"
 }
+
+
+
+###
+GET http://localhost:3000/api/todos/642956d452ae36500a760264
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
+
+
+
+###
+PATCH http://localhost:3000/api/todos/642956d452ae36500a760264
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
+Content-Type: application/json
+
+
+{
+    "title":"this is my first todo updted",
+    "description":"this is description for my first todo updated"
+}
+
+
+
+###
+DELETE http://localhost:3000/api/todos/642956d452ae36500a760264
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI3MGRkNWVlMTdiYmQ2NWIzODhhMmEiLCJ1c2VybmFtZSI6Im5ld25hbWUiLCJlbWFpbCI6Im5ld25hbWVAbmFtZS5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRRMU9lTS4vSDkxSHhwMmNNVWtCckxPeWh3Q3Y1djVWRnRZVkY4SmJCNGdmME52NklNZFBSVyIsInRvZG9zIjpbXSwiX192IjowLCJpYXQiOjE2ODA0MzA2MjMsImV4cCI6MTY4MDQzNzgyM30.4eSUlCX_55MXD4OSNYbAHSe2yqvmIAvWmluNnxdrGWc
+

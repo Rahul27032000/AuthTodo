@@ -32,12 +32,17 @@ require("crypto").randomBytes(64).toString("hex")
 
 **Technology used**
 
-- Express
-- Mongoose
-- Nodemon
-- Dotenv
-- jsonwebtoken
-- bcrypt
+- Express -> Express is a Node.js web application framework that provides a set of features and tools for building web applications, such as routing, middleware, and templating.
+
+- Mongoose -> Mongoose is an Object Data Modeling (ODM) library for MongoDB and is used to define schemas and models for MongoDB documents, making it easier to work with MongoDB in a Node.js application.
+
+- Nodemon-> Nodemon is a tool that monitors changes in the source code of a Node.js application and automatically restarts the server when changes are detected, making the development process faster and more efficient.
+
+- Dotenv ->Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env, making it easier to manage environment-specific configuration in a Node.js application.
+
+- jsonwebtoken -> Jsonwebtoken is a Node.js module that allows for the generation and verification of JSON Web Tokens (JWTs), which are used for secure transmission of information between parties in a web application.
+
+- bcrypt -> Bcrypt is a Node.js module that provides password hashing and comparison functionalities, making it easier to securely store and verify passwords in a web application.
 
 | Endpoint       | Method | Description                                                               |
 | -------------- | ------ | ------------------------------------------------------------------------- |

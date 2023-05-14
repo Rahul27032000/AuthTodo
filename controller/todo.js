@@ -50,6 +50,8 @@ const updateTodoById = async (req, res) => {
     const title = req.body.title;
     const description = req.body.description;
     const user = req.user._id;
+    console.log(title);
+    console.log(description);
 
     const todo = await Todo.findOne().where({ _id: req.params.id, user: user });
     if (!todo) return res.status(404).json({ message: "Todo does not exist" });
@@ -59,6 +61,8 @@ const updateTodoById = async (req, res) => {
 
     todo.title = title || todo.title;
     todo.description = title || todo.description;
+    console.log(todo.title);
+    console.log(todo.description);
     todo.save();
     res.status(201).json({ todo });
   } catch (error) {
